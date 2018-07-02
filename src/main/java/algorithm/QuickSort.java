@@ -1,4 +1,4 @@
-package aglorithm;
+package algorithm;
 
 import java.util.Arrays;
 
@@ -37,7 +37,7 @@ public class QuickSort {
         int k = a [start];
         a[start] = a[i];
         a[i] = k;
-
+        // 经过一次排序 a[i] 是确定的数组排序的中间位置
         sort(a, start, i-1);
         sort(a, i+1, end);
     }
