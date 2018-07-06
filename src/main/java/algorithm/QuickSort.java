@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QuickSort {
     public static void main(String args[]) {
          int[] a = {40,60,30,80,50,20,90,20,10,70};
-         sort(a,0, 3);
+         sort(a,0, 9);
         System.out.println(Arrays.toString(a));
     }
 
