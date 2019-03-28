@@ -14,7 +14,6 @@ public class BinaryFind {
     public static boolean find(int a[], int target) {
         int min = 0;
         int max = a.length - 1;
-
         while (min <= max) {
             int middle = (min + max) / 2;
             if (target > a[middle]) {
