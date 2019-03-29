@@ -1,4 +1,4 @@
-package algorithm.thread;
+package algorithm.thread.prodcerconusmer;
 
 import com.google.common.collect.Lists;
 import java.util.List;

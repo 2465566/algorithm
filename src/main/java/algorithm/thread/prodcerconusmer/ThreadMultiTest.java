@@ -1,4 +1,4 @@
-package algorithm.thread;
+package algorithm.thread.prodcerconusmer;
 
 public class ThreadMultiTest {
 

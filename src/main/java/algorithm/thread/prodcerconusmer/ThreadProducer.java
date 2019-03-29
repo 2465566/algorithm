@@ -1,4 +1,6 @@
-package algorithm.thread;
+package algorithm.thread.prodcerconusmer;
+
+import algorithm.thread.prodcerconusmer.ElementBuffer;
 
 public class ThreadProducer extends Thread {
 
