@@ -1,8 +1,9 @@
 package algorithm.thread.prodcerconusmer;
 
 import com.google.common.collect.Lists;
-import java.util.List;
 import org.springframework.util.CollectionUtils;
+
+import java.util.List;
 
 public class ElementBuffer {
 
