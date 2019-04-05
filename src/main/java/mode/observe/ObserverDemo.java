@@ -2,7 +2,7 @@ package mode.observe;
 
 import mode.observe.impl.FirstObserverImpl;
 import mode.observe.impl.SecondObserverImpl;
-import mode.observe.impl.ThridObserverImpl;
+import mode.observe.impl.ThirdObserverImpl;
 
 public class ObserverDemo {
   public static void main(String args[]) {
@@ -10,7 +10,7 @@ public class ObserverDemo {
 
     new FirstObserverImpl(subject);
     new SecondObserverImpl(subject);
-    new ThridObserverImpl(subject);
+    new ThirdObserverImpl(subject);
 
     subject.setState(10);
     subject.setState(20);
