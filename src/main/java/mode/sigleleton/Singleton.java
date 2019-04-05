@@ -1,4 +1,4 @@
-package algorithm;
+package mode.sigleleton;
 
 /**
  * 懒汉式单例即在使用使用时才创建类的实例，工厂方法增加类synchronized关键字以保证线程安全。

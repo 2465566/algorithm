@@ -12,6 +12,6 @@ public class SecondObserverImpl extends Observer {
 
   @Override
   public void update() {
-    System.out.println("this is the secondObserverImpl logging");
+    System.out.println("this is the secondObserverImpl state: " + subject.getState());
   }
 }
