@@ -1,4 +1,4 @@
-package algorithm.thread.prodcerconusmer;
+package thread.prodcerconusmer;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;

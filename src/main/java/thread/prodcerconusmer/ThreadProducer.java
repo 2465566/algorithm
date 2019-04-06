@@ -1,4 +1,4 @@
-package algorithm.thread.prodcerconusmer;
+package thread.prodcerconusmer;
 
 public class ThreadProducer extends Thread {
 

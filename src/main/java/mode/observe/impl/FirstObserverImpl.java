@@ -7,7 +7,7 @@ public class FirstObserverImpl extends Observer {
 
   public FirstObserverImpl(Subject subject) {
     this.subject = subject;
-    this.subject.attach(this);
+    this.subject.attach(this);  // this，@Override了方法的当前对象
   }
 
   @Override

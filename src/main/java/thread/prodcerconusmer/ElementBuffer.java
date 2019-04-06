@@ -1,4 +1,4 @@
-package algorithm.thread.prodcerconusmer;
+package thread.prodcerconusmer;
 
 import com.google.common.collect.Lists;
 import org.springframework.util.CollectionUtils;
