@@ -1,5 +1,8 @@
 package mode.agent.staticagent;
 
+import mode.agent.UserDao;
+import mode.agent.UserDaoImpl;
+
 public class Demo {
 
   public static void main(String args[]) {

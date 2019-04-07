@@ -1,4 +1,4 @@
-package mode.agent.staticagent;
+package mode.agent;
 
 /**
  * 目标对象，继承接口

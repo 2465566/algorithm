@@ -1,9 +1,11 @@
 package mode.agent.staticagent;
 
+import mode.agent.UserDao;
+
 /**
  * 代理对象，和被代理对象同时实现接口
  */
-public class UserDaoLogProxy implements UserDao{
+public class UserDaoLogProxy implements UserDao {
 
   /**
    * UserDao 接受目标对象

@@ -1,5 +1,7 @@
 package mode.agent.staticagent;
 
+import mode.agent.UserDao;
+
 public class UserDaoTransactionProxy implements UserDao {
 
   public UserDaoTransactionProxy(UserDao userDao) {
