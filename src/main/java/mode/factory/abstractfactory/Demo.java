@@ -6,7 +6,7 @@ public class Demo {
 
   public static void main(String args[]) {
     Drawer circleDrawer = CircleFactory.getCirecleInstance();
-    Drawer squareDrawer = SquareFactory.getSquareInstace();
+    Drawer squareDrawer = SquareFactory.getSquareInstance();
 
     circleDrawer.draw();
     squareDrawer.draw();

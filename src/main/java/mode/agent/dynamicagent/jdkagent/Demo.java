@@ -1,8 +1,11 @@
-package mode.agent.dynamicgaent;
+package mode.agent.dynamicagent.jdkagent;
 
 import mode.agent.UserDao;
 import mode.agent.UserDaoImpl;
 
+/**
+ * JDK代理
+ */
 public class Demo {
   public static void main(String args[]) {
     /**

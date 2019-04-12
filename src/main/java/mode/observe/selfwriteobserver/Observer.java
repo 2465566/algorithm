@@ -1,4 +1,4 @@
-package mode.observe;
+package mode.observe.selfwriteobserver;
 
 public abstract class Observer {
 

@@ -5,8 +5,9 @@ import mode.factory.Circle;
 import mode.factory.Square;
 
 public class Factory {
+
   public static Drawer getCircleInstance() {
-    return  new Circle();
+    return new Circle();
   }
 
   public static Drawer getSquareInstance() {

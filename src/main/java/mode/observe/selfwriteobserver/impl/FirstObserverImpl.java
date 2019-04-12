@@ -1,7 +1,7 @@
-package mode.observe.impl;
+package mode.observe.selfwriteobserver.impl;
 
-import mode.observe.Observer;
-import mode.observe.Subject;
+import mode.observe.selfwriteobserver.Observer;
+import mode.observe.selfwriteobserver.Subject;
 
 public class FirstObserverImpl extends Observer {
 

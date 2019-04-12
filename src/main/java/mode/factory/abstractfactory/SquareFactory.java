@@ -4,7 +4,7 @@ import mode.factory.Drawer;
 import mode.factory.Square;
 
 public class SquareFactory {
- public static Drawer getSquareInstace() {
+ public static Drawer getSquareInstance() {
    return new Square();
  }
 }

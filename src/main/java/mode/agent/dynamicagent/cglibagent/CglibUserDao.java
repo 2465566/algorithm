@@ -1,5 +1,8 @@
-package mode.agent.dynamicgaent.cglib;
+package mode.agent.dynamicagent.cglibagent;
 
+/**
+ * 该目标对象并没有实现接口
+ */
 public class CglibUserDao {
 
   public void save() {

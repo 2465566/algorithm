@@ -1,4 +1,4 @@
-package mode.agent.dynamicgaent.cglib;
+package mode.agent.dynamicagent.cglibagent;
 
 import java.lang.reflect.Method;
 import org.springframework.cglib.proxy.Enhancer;

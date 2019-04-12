@@ -1,4 +1,4 @@
-package mode.observe;
+package mode.observe.selfwriteobserver;
 
 import com.google.common.collect.Lists;
 import java.util.List;

@@ -1,8 +1,8 @@
-package mode.observe;
+package mode.observe.selfwriteobserver;
 
-import mode.observe.impl.FirstObserverImpl;
-import mode.observe.impl.SecondObserverImpl;
-import mode.observe.impl.ThirdObserverImpl;
+import mode.observe.selfwriteobserver.impl.FirstObserverImpl;
+import mode.observe.selfwriteobserver.impl.SecondObserverImpl;
+import mode.observe.selfwriteobserver.impl.ThirdObserverImpl;
 
 public class ObserverDemo {
   public static void main(String args[]) {
