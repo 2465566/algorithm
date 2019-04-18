@@ -19,6 +19,6 @@ public class UserDaoLogProxy implements UserDao {
   @Override
   public void save() {
     userDao.save();   //执行目标对象业务逻辑
-    System.out.println("日志代理，打印日志");  //代理增强目标对象，打印日志
+    System.out.println("一次增强日志打印，日志代理，打印日志");  //日志代理第一次增强，打印日志
   }
 }

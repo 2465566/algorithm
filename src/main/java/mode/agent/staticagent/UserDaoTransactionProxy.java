@@ -13,12 +13,9 @@ public class UserDaoTransactionProxy implements UserDao {
    */
   UserDao userDao;
 
-
-
   @Override
   public void save() {
-    System.out.println("代理对象开始执行事物");
-    userDao.save();
-    System.out.println("代理对象事物执行完毕");
+    userDao.save();  //执行业务和日志代理一次增强逻辑
+    System.out.println("二次增强事物处理");  // 事物代理二次增强
   }
 }
