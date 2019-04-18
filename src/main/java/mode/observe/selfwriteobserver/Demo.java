@@ -4,7 +4,7 @@ import mode.observe.selfwriteobserver.impl.FirstObserverImpl;
 import mode.observe.selfwriteobserver.impl.SecondObserverImpl;
 import mode.observe.selfwriteobserver.impl.ThirdObserverImpl;
 
-public class ObserverDemo {
+public class Demo {
   public static void main(String args[]) {
     Subject subject = new Subject();
 
@@ -15,5 +15,4 @@ public class ObserverDemo {
     subject.setState(10);
     subject.setState(20);
   }
-
 }
