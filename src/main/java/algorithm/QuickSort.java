@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String args[]) {
-         int[] a = {40,60,30,80,50,20,90,20,10,70};
+         int[] a = {4,6,3,8,5,10,9,2,1,7};
          sort(a,0, 9);
         System.out.println(Arrays.toString(a));
     }
@@ -23,7 +23,7 @@ public class QuickSort {
             while (i < j && a[j] >= key) {
                 j--;
             }
-            while (i < j && a[i] < key) {
+            while (i < j && a[i] <= key) {
                 i++;
             }
 
