@@ -2,7 +2,7 @@ package pattern.behavior.strategy;
 
 public class Environment {
 
-  public CalculateStrategy CalculateStrategy;
+  public CalculateStrategy CalculateStrategy;   // 聚合
 
   Environment(CalculateStrategy calculateStrategy) {
     this.CalculateStrategy = calculateStrategy;

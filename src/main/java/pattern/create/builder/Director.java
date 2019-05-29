@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Director {
 
-  private Builder builder;
+  private Builder builder;  //聚合
 
   public Director(Builder builder) {
     this.builder = builder;

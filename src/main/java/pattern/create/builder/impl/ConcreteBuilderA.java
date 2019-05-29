@@ -4,7 +4,7 @@ import pattern.create.builder.Builder;
 import pattern.create.builder.Product;
 
 public class ConcreteBuilderA implements Builder {
-  private Product product = new Product();     // 构建者模式聚合的特点，非接口。
+  private Product product = new Product();     // 关联
 
   @Override
   public void buildColor() {

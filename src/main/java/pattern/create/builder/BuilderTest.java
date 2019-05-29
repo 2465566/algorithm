@@ -1,6 +1,7 @@
-package pattern.create.builder.impl;
+package pattern.create.builder;
 
-import pattern.create.builder.Director;
+import pattern.create.builder.impl.ConcreteBuilderA;
+import pattern.create.builder.impl.ConcreteBuilderB;
 
 public class BuilderTest {
 
