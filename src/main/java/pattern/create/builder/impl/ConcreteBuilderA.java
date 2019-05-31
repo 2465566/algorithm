@@ -8,12 +8,12 @@ public class ConcreteBuilderA implements Builder {
 
   @Override
   public void buildColor() {
-    product.setBranch("color A");
+    product.setColor("color A");
   }
 
   @Override
   public void buildBrand() {
-    product.setColor("branch A");
+    product.setBrand("branch A");
   }
 
   @Override

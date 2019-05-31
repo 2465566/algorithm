@@ -10,7 +10,7 @@ public class UserDaoLogProxy implements UserDao {
   /**
    * UserDao 接受目标对象
    */
-  UserDao userDao;
+  UserDao userDao;   //聚合
 
   UserDaoLogProxy(UserDao userDao) {
     this.userDao = userDao;

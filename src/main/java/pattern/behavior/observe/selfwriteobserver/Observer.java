@@ -1,5 +1,5 @@
 package pattern.behavior.observe.selfwriteobserver;
 
-public interface  Observer {
+public interface Observer {
    void update();
 }

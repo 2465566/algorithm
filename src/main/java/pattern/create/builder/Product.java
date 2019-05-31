@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class Product {
   private String color;
-  private String branch;
+  private String brand;
 }

@@ -17,7 +17,6 @@ public class Director {
   }
 
   public void getResult() {
-//    return this.builder.getResult();
     System.out.println("result" + this.builder.getResult());
   }
 
