@@ -2,10 +2,10 @@ package pattern.constructure.bridge.impl;
 
 import pattern.constructure.bridge.Implementor;
 
-public class ConcreateImplementorB implements Implementor {
+public class ConcreteImplementorA implements Implementor {
 
   @Override
   public void operator() {
-    System.out.println("this is the second operator impl");
+    System.out.println("this is the first operator impl");
   }
 }
