@@ -2,7 +2,7 @@ package pattern.constructure.decorator;
 
 public class AutomaticCar extends SuperCar {
 
-  public AutomaticCar(ICar iCar) {
+  AutomaticCar(ICar iCar) {
     super(iCar);
   }
 

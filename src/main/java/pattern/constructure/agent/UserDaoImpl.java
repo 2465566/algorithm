@@ -3,7 +3,7 @@ package pattern.constructure.agent;
 /**
  * 目标对象，继承接口
  */
-public class UserDaoImpl implements UserDao{
+public class UserDaoImpl implements UserDao {
 
   @Override
   public void save() {

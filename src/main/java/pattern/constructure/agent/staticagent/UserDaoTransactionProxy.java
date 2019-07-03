@@ -11,7 +11,7 @@ public class UserDaoTransactionProxy implements UserDao {
   /**
    * UserDao 接受目标对象
    */
-  UserDao userDao;   //聚合
+  private UserDao userDao;   //聚合
 
   @Override
   public void save() {

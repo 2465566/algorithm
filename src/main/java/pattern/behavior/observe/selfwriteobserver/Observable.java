@@ -23,7 +23,7 @@ public class Observable {
 
   public synchronized void notifiedAll() {
     for (Observer observer : observerList) {
-      observer.update();
+      observer.update(state);
     }
   }
 }

@@ -3,14 +3,14 @@ package pattern.constructure.agent.staticagent;
 import pattern.constructure.agent.UserDao;
 
 /**
- * 代理对象，和被代理对象同时实现接口
+ * 代理对象UserDaoLogProxy，和被代理对象同时实现接口
  */
 public class UserDaoLogProxy implements UserDao {
 
   /**
    * UserDao 接受目标对象
    */
-  UserDao userDao;   //聚合
+  private UserDao userDao;   //聚合
 
   UserDaoLogProxy(UserDao userDao) {
     this.userDao = userDao;

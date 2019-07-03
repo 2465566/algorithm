@@ -10,7 +10,7 @@ public class ThirdObserverImpl implements Observer {
   }
 
   @Override
-  public void update() {
-    System.out.println("this is the thirdObserverImpl state: ");
+  public void update(int state) {
+    System.out.println("this is the thirdObserverImpl state: " + state);
   }
 }

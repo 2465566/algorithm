@@ -10,7 +10,7 @@ public class FirstObserverImpl implements Observer {
   }
 
   @Override
-  public void update() {
-    System.out.println("this is the firstObserverImpl state: ");
+  public void update(int state) {
+    System.out.println("this is the firstObserverImpl state: " + state);
   }
 }

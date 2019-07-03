@@ -7,7 +7,7 @@ public class CompositeTest {
     Composite root = new Composite("D盘");
 
     Composite picture = new Composite("图片文件夹");
-    Composite movie = new Composite("视屏文件夹");
+    Composite movie = new Composite("视频文件夹");
     Composite doc = new Composite("文档文件夹");
 
     picture.addComponent(new Leaf("1.jpg"));
