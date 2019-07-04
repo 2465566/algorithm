@@ -6,4 +6,6 @@ package pattern.behavior.visitor;
 public interface CountryFactoryI {
 
   void accept(VisitorI visitorI);
+
+  void operator(); //具体元素对象可以在此执行自己的逻辑
 }

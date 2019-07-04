@@ -9,4 +9,9 @@ public class JapanFactory implements CountryFactoryI {
   public void accept(VisitorI visitorI) {
     visitorI.visit(this);
   }
+
+  @Override
+  public void operator() {
+    System.out.println("感觉一般");
+  }
 }
