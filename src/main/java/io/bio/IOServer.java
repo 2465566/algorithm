@@ -4,11 +4,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingDeque;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 public class IOServer {
   public static void main(String[] args) throws Exception {
 
     ServerSocket serverSocket = new ServerSocket(8000);
+
+    ExecutorService executorService = new ThreadPoolExecutor(6, 10, 1,
+        TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10) {
+        });
 
     // (1) 接收新连接线程
     new Thread(() -> {
@@ -18,20 +27,23 @@ public class IOServer {
           Socket socket = serverSocket.accept();
 
           // (2) 每一个新的连接都创建一个线程，负责读取数据
-          new Thread(() -> {
-            try {
-              byte[] data = new byte[1024];
-              InputStream inputStream = socket.getInputStream();
-              while (true) {
-                int len;
-                // (3) 按字节流方式读取数据
-                while ((len = inputStream.read(data)) != -1) {
-                  System.out.println(new String(data, 0, len));
+          executorService.execute(new Runnable() {
+            @Override
+            public void run() {
+              try {
+                byte[] data = new byte[1024];
+                InputStream inputStream = socket.getInputStream();
+                while (true) {
+                  int len;
+                  // (3) 按字节流方式读取数据
+                  while ((len = inputStream.read(data)) != -1) {
+                    System.out.println(new String(data, 0, len));
+                  }
                 }
+              } catch (IOException e) {
               }
-            } catch (IOException e) {
             }
-          }).start();
+          });
 
         } catch (IOException e) {
         }
