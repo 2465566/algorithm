@@ -15,6 +15,5 @@ public abstract class Component {
   public List<Component> getComponentList() {
     throw new UnsupportedOperationException("对象不支持此功能");
   }
-
   public abstract void printStr();
 }

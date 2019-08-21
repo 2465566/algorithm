@@ -1,5 +1,8 @@
 package pattern.constructure.adapter;
 
+import pattern.constructure.adapter.impl.MP3Player;
+import pattern.constructure.adapter.impl.MP4Player;
+
 public class Adapter {
   private AdvancedMediaPlayer advancedMediaPlayer;
 
@@ -18,7 +21,4 @@ public class Adapter {
       advancedMediaPlayer.playMP4(fileName);
     }
   }
-
-
-
 }

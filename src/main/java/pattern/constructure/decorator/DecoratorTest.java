@@ -14,5 +14,4 @@ public class DecoratorTest {
     FlySuperCar flySuperCar = new FlySuperCar(car);
     flySuperCar.move();
   }
-
 }

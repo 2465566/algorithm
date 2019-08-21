@@ -1,4 +1,6 @@
-package pattern.constructure.adapter;
+package pattern.constructure.adapter.impl;
+
+import pattern.constructure.adapter.AdvancedMediaPlayer;
 
 public class MP3Player implements AdvancedMediaPlayer {
 

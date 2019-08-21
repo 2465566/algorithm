@@ -1,6 +1,6 @@
 package pattern.constructure.adapter;
 
-public class AudioAdapter implements MediaPlayer{
+public class AudioAdapter implements MediaPlayer {
 
   private Adapter adapter;
 
@@ -11,7 +11,7 @@ public class AudioAdapter implements MediaPlayer{
       adapter = new Adapter(type);
       adapter.play(type, fileName);
     } else {
-      System.out.println("不支持的文件格式： " + type);
+      System.out.println("不支持的文件格式: " + type);
     }
   }
 }
