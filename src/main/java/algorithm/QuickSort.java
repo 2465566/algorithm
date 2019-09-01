@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void main(String args[]) {
-         int[] a = {4,6,3,8,5,10,9,2,1,7};
-         sort(a,0, 9);
+         int[] a = {4,3,6,1,5,2};
+         sort(a,0, 5);
         System.out.println(Arrays.toString(a));
     }
 

@@ -1,6 +1,7 @@
 package io.nio.netty;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -8,13 +9,15 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
+import io.netty.util.internal.StringUtil;
 import java.util.Calendar;
 import java.util.Date;
 import javafx.beans.Observable;
 import javax.xml.crypto.Data;
+import org.springframework.util.StringUtils;
 
 public class NettyNioServer {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     int port = 8001;
     ServerBootstrap serverBootstrap = new ServerBootstrap();
 
@@ -22,7 +25,7 @@ public class NettyNioServer {
      * boos 线程池则只是在 Bind 某个端口后，获得其中一个线程作为 MainReactor，
      * 专门处理端口的 Accept 事件，每个端口对应一个 Boss 线程。
      */
-    NioEventLoopGroup boos = new NioEventLoopGroup();
+    NioEventLoopGroup boos = new NioEventLoopGroup(1);
 
     /**
      * workerGroup 线程池会被各个 SubReactor 和 Worker 线程充分利用。
@@ -48,36 +51,18 @@ public class NettyNioServer {
          * ChannelInboundHandler 用于处理入站 I/O 事件。
          * ChannelOutboundHandler 用于处理出站 I/O 操作。
          * 或者使用以下适配器类：
-         *
          * ChannelInboundHandlerAdapter 用于处理入站 I/O 事件。
          * ChannelOutboundHandlerAdapter 用于处理出站 I/O 操作。
          * ChannelDuplexHandler 用于处理入站和出站事件。
          */
-        .childHandler(new ChannelInitializer<NioSocketChannel>() {    // 配置入站、出站事件handler
-          protected void initChannel(NioSocketChannel channel) {
-            // 配置入站、出站事件channel
+        .childHandler(new TestChannelInitializer())
 
-            /**
-             * ChannelPipeline 保存 ChannelHandler 的 List，用于处理或拦截 Channel 的入站事件和出站操作。
-             * ChannelPipeline 实现了一种高级形式的拦截过滤器模式，使用户可以完全控制事件的处理方式
-             * ，以及 Channel 中各个的 ChannelHandler 如何相互交互。
-             */
-            channel.pipeline().addLast(new StringDecoder());
-            channel.pipeline().addLast(new SimpleChannelInboundHandler<String>() {   // addLast 就是让流水线中加入一个处理工序, 此处打印数据
-              @Override
-              protected void channelRead0(ChannelHandlerContext ctx, String msg) {
-                /**
-                 * ChannelHandlerContext
-                 * 保存 Channel 相关的所有上下文信息，同时关联一个 ChannelHandler 对象。
-                 */
-                System.out.println(msg);
-              }
-            });
-          }
-        })
+//        ;ChannelFuture channelFuture = serverBootstrap.bind(8001).sync();
+//        channelFuture.channel().closeFuture().sync();
         .bind(port)
+
         /**
-         *异步操作
+         *  异步操作
          * .isDone()
          * .isSuccess()
          * .isCancelled()
