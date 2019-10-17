@@ -1,5 +1,7 @@
 package spring.aop;
 
+import spring.annotation.SmartMapper;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
@@ -13,7 +15,9 @@ public class MyInvocationHandler implements InvocationHandler {
 
   @Override
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-    System.out.println("this is trans proxy method");
+    SmartMapper smartMapper = method.getAnnotation(SmartMapper.class);
+    String sql = smartMapper.value();
+    System.out.println("代理打印一下注解sql" + sql);
     return method.invoke(target, args);
   }
 }
