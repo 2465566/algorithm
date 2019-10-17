@@ -52,11 +52,11 @@ public class Singleton {
  *
  * 编译器为了优化性能，可能会将2、3操作调换顺序，假设A线程在执行new Singleton()方法时，由于2、3操作重排序，而初始化对象操作尚未完成时释放了锁。
  * 线程B获取锁之后会发现instance已经不为空，当线程B获取到instance对象后如果直接使用就会出错，原因就是对象没有进行初始化操作。
- * 而volatile关键字能避免重排序，因此能保证线程安全。总体上来说，双重检测由于加了锁，多线程并发下还是会有效率问题。
+ * 而volatile关键字能避免重排序避免 double-checked locking （DCL） 失效，因此能保证线程安全。总体上来说，双重检测由于加了锁，多线程并发下还是会有效率问题。
 
 public class Singleton {
 
-  private static volatile Singleton instance;
+  private static volatile Singleton instance;   //禁止指令重拍，避免 double-checked locking （DCL） 失效
 
   private Singleton() {
   }

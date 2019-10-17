@@ -6,7 +6,7 @@ public class BinaryFind {
 
     public static void main(String args[]) {
         int[] a = {40,60,30,80,50,20,90,20,10,70};
-        int target = 30;
+        int target = 10;
         Arrays.sort(a);
         System.out.println(find(a, target) ? "get result successful" : " can not find the target");
     }

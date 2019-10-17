@@ -22,7 +22,6 @@ public class Composite extends Component {
     componentList.remove(index);
   }
 
-  @Override
   public void printStr() {
     System.out.println("name: " + name);
     if (!CollectionUtils.isEmpty(componentList)) {

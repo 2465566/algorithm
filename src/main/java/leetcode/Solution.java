@@ -2,12 +2,18 @@ package leetcode;
 
 public class Solution {
 
-  public int[] twoSum(int[] nums, int target) {
+
+  public static void main(String[] args) {
+    int[] array = {1,2,3,4,5};
+    twoSum(array, 5);
+  }
+
+  public static int[] twoSum(int[] nums, int target) {
     int len = nums.length;
     int result[] = new int[2];
 
     for (int i = 0; i < len; i++) {
-      for (int j = i; j < len - i; j++) {
+      for (int j = i+1; j < len; j++) {
         int senc = i + 1;
         if (target == nums[i] + nums[senc]) {
           result[0] = i;

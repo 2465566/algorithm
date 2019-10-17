@@ -8,6 +8,7 @@ public class AmericaFactory implements CountryFactoryI {
   @Override
   public void accept(VisitorI visitorI) {
     visitorI.visit(this);
+    this.operator();   //可以再main方法里手动调用
   }
 
   @Override

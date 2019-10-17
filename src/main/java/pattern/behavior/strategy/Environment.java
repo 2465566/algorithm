@@ -8,10 +8,6 @@ public class Environment {
     this.calculateStrategy = calculateStrategy;
   }
 
-  public void setCalculateStrategy(CalculateStrategy calculateStrategy) {
-    this.calculateStrategy = calculateStrategy;
-  }
-
   public int calculate(int i, int j) {
     return this.calculateStrategy.calculate(i, j);    // important
   }
