@@ -6,9 +6,7 @@ public class Context {
   public void setStatus(Status status) {
     this.status = status;
   }
-
-  public void perform() {
-    this.status.perform();
+  public void print(){
+    status.perform(this);
   }
-
 }

@@ -6,5 +6,5 @@ package pattern.behavior.status;
  */
 
 public interface Status {
-  void perform();
+  void perform(Context context);
 }
