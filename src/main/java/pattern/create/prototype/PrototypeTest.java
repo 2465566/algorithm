@@ -14,5 +14,4 @@ public class PrototypeTest {
     System.out.println(resume.getClass() == cloneResume.getClass());
 
   }
-
 }

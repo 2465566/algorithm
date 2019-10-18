@@ -1,5 +1,8 @@
 package pattern.constructure.decorator;
 
+/**
+ * 需要被装饰的原始对象
+ */
 public class Car implements ICar {
 
   @Override
