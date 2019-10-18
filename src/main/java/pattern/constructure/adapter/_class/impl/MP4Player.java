@@ -1,6 +1,7 @@
-package pattern.constructure.adapter.impl;
+package pattern.constructure.adapter._class.impl;
 
-import pattern.constructure.adapter.AdvancedMediaPlayer;
+
+import pattern.constructure.adapter._class.AdvancedMediaPlayer;
 
 public class MP4Player implements AdvancedMediaPlayer {
 

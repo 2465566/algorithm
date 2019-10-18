@@ -1,7 +1,7 @@
-package pattern.constructure.adapter;
+package pattern.constructure.adapter._object;
 
-import pattern.constructure.adapter.impl.MP3Player;
-import pattern.constructure.adapter.impl.MP4Player;
+import pattern.constructure.adapter._object.impl.MP3Player;
+import pattern.constructure.adapter._object.impl.MP4Player;
 
 public class Adapter {
   private AdvancedMediaPlayer advancedMediaPlayer;

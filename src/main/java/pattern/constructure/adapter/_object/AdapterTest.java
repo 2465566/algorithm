@@ -1,4 +1,4 @@
-package pattern.constructure.adapter;
+package pattern.constructure.adapter._object;
 
 public class AdapterTest {
 
