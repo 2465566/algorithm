@@ -5,7 +5,7 @@ package pattern.behavior.visitor;
  */
 public interface VisitorI {
 
-  void visit(AmericaFactory americaFactory);
+  void visit(EngineerStaff engineerStaff);
 
-  void visit(JapanFactory japanFactory);
+  void visit(MangerStaff mangerStaff);
 }

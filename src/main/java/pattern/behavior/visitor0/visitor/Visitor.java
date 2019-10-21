@@ -1,4 +1,4 @@
-package pattern.behavior.visitor;
+package pattern.behavior.visitor0.visitor;
 
 /**
  * 具体访问者

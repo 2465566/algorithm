@@ -1,4 +1,4 @@
-package pattern.behavior.visitor;
+package pattern.behavior.visitor0.visitor;
 
 /**
  * 具体元素实现了Accept方法，在Accept方法中调用访问者的访问方法以便完成一个元素的操作。
