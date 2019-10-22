@@ -9,5 +9,5 @@ import java.lang.annotation.*;
 @Component
 @Documented
 public @interface SmartMapper {
-    String value() default "select * from table where id > 0";
+    String value();
 }
