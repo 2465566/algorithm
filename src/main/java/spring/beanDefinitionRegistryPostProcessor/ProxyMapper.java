@@ -1,4 +1,4 @@
-package spring.factoryBean;
+package spring.beanDefinitionRegistryPostProcessor;
 
 public class ProxyMapper {
     public ProxyMapper() {

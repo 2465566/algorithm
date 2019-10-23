@@ -7,4 +7,10 @@ import org.springframework.stereotype.Component;
 public class BaseUp {
     @Autowired
     private Base base;
+
+    private BaseType baseType;
+
+    public void setBaseType(BaseType baseType) {
+        this.baseType = baseType;
+    }
 }

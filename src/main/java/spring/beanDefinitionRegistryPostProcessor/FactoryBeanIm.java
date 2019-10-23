@@ -1,11 +1,9 @@
-package spring.factoryBean;
+package spring.beanDefinitionRegistryPostProcessor;
 
 import org.springframework.beans.factory.FactoryBean;
-import org.springframework.stereotype.Component;
-import spring.beanDefinitionRegistryPostProcessor.ProxyMapper;
+import org.springframework.beans.factory.config.BeanDefinition;
 
-@Component
-public class MyFactoryBean implements FactoryBean {
+public class FactoryBeanIm implements FactoryBean {
     @Override
     public Object getObject() throws Exception {
         return new ProxyMapper();
