@@ -31,8 +31,7 @@ public class NettyNioServer {
      * workerGroup 线程池会被各个 SubReactor 和 Worker 线程充分利用。
      */
     NioEventLoopGroup workerGroup = new NioEventLoopGroup();
-    serverBootstrap
-        .group(boos, workerGroup)
+    serverBootstrap.group(boos, workerGroup)
 
         /**
          * NioSocketChannel，异步的客户端 TCP Socket 连接。

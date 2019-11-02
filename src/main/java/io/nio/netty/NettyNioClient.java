@@ -25,8 +25,11 @@ public class NettyNioClient {
     Channel channel = bootstrap.connect("127.0.0.1", 8001).channel();
 
     while (true) {
-      channel.writeAndFlush(new Date() + ": hello world7777777!");
-      Thread.sleep(2000);
+        String message = new Date() + ": hello world7777777!";
+        channel.writeAndFlush("client send: " + message);
+        System.out.println(message);
+
+        Thread.sleep(2000);
     }
   }
 }

@@ -24,6 +24,8 @@ public class TestChannelInitializer extends ChannelInitializer {
          * ChannelHandlerContext
          * 保存 Channel 相关的所有上下文信息，同时关联一个 ChannelHandler 对象。
          */
+        System.out.println(Thread.currentThread().getName());
+        System.out.println(Thread.currentThread().getId());
         System.out.println(msg);
       }
     });
