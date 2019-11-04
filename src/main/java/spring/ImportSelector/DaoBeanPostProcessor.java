@@ -1,4 +1,4 @@
-package spring.aop;
+package spring.ImportSelector;
 
 import java.lang.reflect.Proxy;
 import org.springframework.beans.BeansException;
@@ -22,5 +22,4 @@ public class DaoBeanPostProcessor implements BeanPostProcessor {
   public Object postProcessAfterInitialization(Object o, String s) throws BeansException {
     return o;
   }
-
 }

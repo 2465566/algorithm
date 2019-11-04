@@ -1,4 +1,4 @@
-package spring.aop;
+package spring.ImportSelector;
 
 import spring.annotation.SmartMapper;
 

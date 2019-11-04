@@ -25,6 +25,14 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor, Bea
          * 这也说明@Autowired 不是根据 byType 装配的
          */
         a.setAutowireMode(2);
+
+        /**
+         * 注意：在自定义beanFactoryPostProcessor 中不能通过beanFactory去获取容器中bean。
+         * 比如beanFactory.getBean("xxx"); 会导致xxx这个bean类引用的属性为空。
+         * 因为beanFactoryPostProcesstor执行的阶段spring还未将每个bean整个实例化完。
+         * 所以在调用getBean的时候会直接去生成这个对象，并且给对象属性包装。当
+         * spring发现xxx里面引用了user标注@Autowire就会从容器中找"user"这个bean但是此时"user"这个bean还未实例化，所以为空。
+         */
     }
 
     @Override

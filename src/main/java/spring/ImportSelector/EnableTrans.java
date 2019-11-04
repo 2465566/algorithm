@@ -1,4 +1,4 @@
-package spring.aop;
+package spring.ImportSelector;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
