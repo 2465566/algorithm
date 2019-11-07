@@ -8,8 +8,10 @@ import java.util.concurrent.TimeUnit;
 public class ThreadMultiTest {
   public static void main(String[] args) {
     final ElementBuffer buffer = ElementBuffer.getElementBuffer();
-    ExecutorService addElementExecutorService = new ThreadPoolExecutor(5, 10, 20, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(20));
-    ExecutorService removeElementExecutorService = new ThreadPoolExecutor(5, 10, 20, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(20));
+    ExecutorService addElementExecutorService = new ThreadPoolExecutor(5, 10, 20,
+            TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(20));
+    ExecutorService removeElementExecutorService = new ThreadPoolExecutor(5, 10, 20,
+            TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(20));
 
     for (int i = 0; i < 20; i++) {
       addElementExecutorService.submit(new Runnable() {

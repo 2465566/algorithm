@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * 代理对象不需要实现接口,但是目标对象一定要实现接口,否则不能用动态代理.
+ * 代理对象不需要实现接口,但是目标对象一定要实现接口,否则不能用JDK动态代理.
  */
 public class ProxyFactory { //不需要实现接口
 

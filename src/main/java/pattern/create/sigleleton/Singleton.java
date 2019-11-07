@@ -50,9 +50,16 @@ public class Singleton {
  * 2）初始化对象；
  * 3）设置instance指向分配的内存地址；
  *
+
+ *
  * 编译器为了优化性能，可能会将2、3操作调换顺序，假设A线程在执行new Singleton()方法时，由于2、3操作重排序，而初始化对象操作尚未完成时释放了锁。
  * 线程B获取锁之后会发现instance已经不为空，当线程B获取到instance对象后如果直接使用就会出错，原因就是对象没有进行初始化操作。
  * 而volatile关键字能避免重排序避免 double-checked locking （DCL） 失效，因此能保证线程安全。总体上来说，双重检测由于加了锁，多线程并发下还是会有效率问题。
+ *
+ * 编译器优化（指令重排序）的操作如下：
+ * 1.分配一块内存M
+ * 2.将M的地址值赋给instance
+ * 3.在内存M上初始化Singleton对象
 
 public class Singleton {
 
@@ -62,10 +69,10 @@ public class Singleton {
   }
 
   public static Singleton getInstance() {
-    if (instance == null) {
+    if (instance == null) {                    -------第二个线程已经不为null, 但会一个尚未初始化的对象
       synchronized (Singleton.class) {
         if (instance == null) {
-          instance = new Singleton();
+          instance = new Singleton();   ----例如第一个线程 还未3.在内存M上初始化Singleton对象，线程停止。
         }
       }
     }
