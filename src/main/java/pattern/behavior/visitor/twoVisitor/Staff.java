@@ -15,6 +15,6 @@ public abstract class Staff {
         this.kpi = new Random().nextInt(10);
     }
 
-    // 接受访问者访问对的接口
+    // 接受访问者访问对的接口, 具体被访者通过重写这个方法 通过传进来的访问者 visitorI.visit(自己)
   public abstract void accept(VisitorI visitorI);
 }
