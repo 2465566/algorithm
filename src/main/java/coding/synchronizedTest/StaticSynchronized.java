@@ -13,10 +13,9 @@ public class StaticSynchronized {
   }
 
 
-  public static void getB() {
+  public static synchronized void getB() {
     System.out.println("current time B:" + System.currentTimeMillis());
     System.out.println("name = " + Thread.currentThread().getName() + ", end");
-
   }
 
   public static void main(String[] args) {
