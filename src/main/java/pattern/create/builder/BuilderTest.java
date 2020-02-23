@@ -11,9 +11,9 @@ public class BuilderTest {
    */
   public static void main(String[] args) {
 
-    ConcreteBuilderA concreteBuilderA = new ConcreteBuilderA();
-    ConcreteBuilderB concreteBuilderB = new ConcreteBuilderB();
-    Director director = new Director(concreteBuilderA);
+    ConcreteBuilderA concreteBuilderA = new ConcreteBuilderA();   // 对象表示特征
+    ConcreteBuilderB concreteBuilderB = new ConcreteBuilderB();   // 对象表示特征
+    Director director = new Director(concreteBuilderA);    // 对象构造的通用过程
     director.construct();
     director.getResult();
 

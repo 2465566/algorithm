@@ -17,7 +17,7 @@ public class MyBeanFactoryPostProcessor implements BeanDefinitionRegistryPostPro
         GenericBeanDefinition beanDefinition = new GenericBeanDefinition();
         beanDefinition.setBeanClass(FactoryBeanIm.class);
         beanDefinition.setAutowireMode(2);
-        beanDefinitionRegistry.registerBeanDefinition("factoryBeanIm-----", beanDefinition);
+        beanDefinitionRegistry.registerBeanDefinition("factoryBeanIm", beanDefinition);
     }
 
     @Override

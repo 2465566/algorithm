@@ -23,7 +23,7 @@ public class NettyNioServer {
 
     /**
      * boos 线程池则只是在 Bind 某个端口后，获得其中一个线程作为 MainReactor，
-     * 专门处理端口的 Accept 事件，每个端口对应一个 Boss 线程。
+     * 专门处理端口的 Accept事件（处理客户端连接请求），每个端口对应一个 Boss 线程。
      */
     NioEventLoopGroup boos = new NioEventLoopGroup(1);
 
