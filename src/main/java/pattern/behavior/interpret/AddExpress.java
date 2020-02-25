@@ -2,8 +2,8 @@ package pattern.behavior.interpret;
 
 public class AddExpress implements Express {
 
-  Express expr1;
-  Express expr2;
+  private Express expr1;
+  private Express expr2;
 
   AddExpress(Express expr1, Express expr2) {
     this.expr1 = expr1;

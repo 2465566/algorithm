@@ -8,6 +8,7 @@ public class EngineerStaff extends Staff {
     super(name);
   }
 
+  //接受访问者的访问，并进行访问者的访问行为
   @Override
   public void accept(VisitorI visitorI) {
     visitorI.visit(this);

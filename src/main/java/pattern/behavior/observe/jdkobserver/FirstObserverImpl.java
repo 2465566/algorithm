@@ -15,6 +15,6 @@ public class FirstObserverImpl implements Observer {
   @Override
   public void update(Observable o, Object arg) {
     String msg = ((Subject) o).getMessage();
-    System.out.println(name + " this is the FirstObserverImpl logging");
+    System.out.println(name + " this is the FirstObserverImpl logging: " + msg);
   }
 }

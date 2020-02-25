@@ -5,9 +5,7 @@ public class ConcreteColleagueA extends Colleague {
   @Override
   public void send(String message) {
     System.out.println("ca send message: " + message+ ", with media: " + media.hashCode());
-
     media.forward(this, message);
-
   }
 
   @Override

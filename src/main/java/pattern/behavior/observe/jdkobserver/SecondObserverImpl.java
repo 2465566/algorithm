@@ -14,6 +14,7 @@ public class SecondObserverImpl implements Observer {
 
   @Override
   public void update(Observable o, Object arg) {
-    System.out.println(name + " this is the SecondObserverImpl logging");
+    String msg = ((Subject) o).getMessage();
+    System.out.println(name + " this is the SecondObserverImpl logging: " + msg);
   }
 }

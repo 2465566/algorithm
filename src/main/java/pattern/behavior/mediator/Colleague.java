@@ -1,9 +1,9 @@
 package pattern.behavior.mediator;
 
 public abstract class Colleague {
-   protected Media media;
+   Media media;
 
-   public void setMedia(Media media) {
+   void setMedia(Media media) {
      this.media = media;
    }
    public abstract void send(String message);
