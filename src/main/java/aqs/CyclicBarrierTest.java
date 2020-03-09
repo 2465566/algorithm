@@ -16,6 +16,10 @@ public class CyclicBarrierTest {
         @Override
         public void run() {
           try {
+
+            /**
+             * 线程内等待，而 CountDownLatch 是现场外等待。
+             */
             cyclicBarrier.await();     // 在没有凑够10个线程的情况下，所有线程阻塞在这里，不往下执行。
             System.out.println("action---" + Thread.currentThread().getName());
 
