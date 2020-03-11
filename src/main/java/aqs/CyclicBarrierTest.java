@@ -12,6 +12,7 @@ public class CyclicBarrierTest {
     ExecutorService executorService = Executors.newCachedThreadPool();
 
     for (int i = 0; i < 8; i++) {
+      //    for (int i = 0; i < 11; i++) {
       executorService.execute(new Runnable() {
         @Override
         public void run() {
@@ -29,8 +30,5 @@ public class CyclicBarrierTest {
         }
       });
     }
-
-    System.out.println("end");
-
   }
 }

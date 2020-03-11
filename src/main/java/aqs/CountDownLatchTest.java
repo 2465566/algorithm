@@ -11,7 +11,7 @@ public class CountDownLatchTest {
 
     ExecutorService executorService = Executors.newCachedThreadPool();
 
-    for (int i = 0; i < 11; i++) {               // 8<10 所以  System.out.println("end"); 将不会执行。
+    for (int i = 0; i < 6; i++) {               // 8<10 所以  System.out.println("end"); 将不会执行。
 //      for (int i = 0; i < 11; i++) {          // 11>10 所以  System.out.println("end"); 会执行。
       executorService.execute(new Runnable() {
         @Override
