@@ -16,18 +16,18 @@ public class QuickSort {
         }
 
         int i = start;
-        int j = end;
+        int j = end;    // start end 留着最后递归做边界用, 用i，j
         int key = a[start];
 
         while (i < j) {
-            while (i < j && a[j] >= key) {
+            while (i < j && a[j] >= key) {  //从右往左，找第一个比key小的值
                 j--;
             }
-            while (i < j && a[i] <= key) {
+            while (i < j && a[i] <= key) {  //从左往右，找第一个比key大的值
                 i++;
             }
 
-            if (i < j) {
+            if (i < j) {      //两个值找到后，互换位置
                 int p = a[i];
                 a[i] = a[j];
                 a[j] = p;
