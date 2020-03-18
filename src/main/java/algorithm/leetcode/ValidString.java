@@ -3,7 +3,7 @@ package algorithm.leetcode;
 import java.util.Stack;
 
 public class ValidString {
-//    此处撰写解题思路
+    //    此处撰写解题思路
 //    用两个栈来存储数据stack、starts。
 //    当数据为'('时存入stack 为 * 时存入 starts
 //    当为')' 先去找与它匹配的')' 没有 就去 starts中找* 再没有就false
@@ -17,11 +17,11 @@ public class ValidString {
             Stack<Integer> stack = new Stack<>();
             Stack<Integer> starts = new Stack<>();
             for (int i = 0; i < s.length(); i++) {
-                if (s.charAt(i)=='('){
+                if (s.charAt(i) == '(') {
                     stack.push(i);
-                } else if(s.charAt(i)==')'){
-                    if (stack.empty()){
-                        if (starts.empty()){
+                } else if (s.charAt(i) == ')') {
+                    if (stack.empty()) {
+                        if (starts.empty()) {
                             return false;
                         } else {
                             starts.pop();
@@ -33,15 +33,15 @@ public class ValidString {
                     starts.push(i);
                 }
             }
-            while (!stack.empty()&&!starts.empty()){
-                if (stack.peek()<starts.peek()){
+            while (!stack.empty() && !starts.empty()) {
+                if (stack.peek() < starts.peek()) {
                     stack.pop();
                     starts.pop();
                 } else {
                     return false;
                 }
             }
-            if (stack.empty()){
+            if (stack.empty()) {
                 return true;
             }
             return false;
