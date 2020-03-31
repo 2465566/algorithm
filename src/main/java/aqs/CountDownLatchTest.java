@@ -28,7 +28,7 @@ public class CountDownLatchTest {
     }
 
     /**
-     * 线程外等待，而  CyclicBarrier 线程内等待
+     * 线程外等待
      */
     countDownLatch.await();     // 一直阻塞
 //    countDownLatch.await(10, TimeUnit.SECONDS);    // 期限阻塞，就算没有减少到0， 10秒之后不再等待 继续执行后面代码。
