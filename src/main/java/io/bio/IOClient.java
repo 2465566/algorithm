@@ -15,6 +15,7 @@ public class IOClient {
             socket.getOutputStream().flush();
             Thread.sleep(2000);
           } catch (Exception e) {
+            e.printStackTrace();
           }
         }
       } catch (IOException e) {

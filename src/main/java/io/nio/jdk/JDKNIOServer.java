@@ -49,7 +49,6 @@ public class JDKNIOServer {
         }
       } catch (IOException ignored) {
       }
-
     }).start();
 
 
@@ -69,23 +68,19 @@ public class JDKNIOServer {
                   SocketChannel clientChannel = (SocketChannel) key.channel();
                   ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
                   // (3) 读取数据以块为单位批量读取
-                  clientChannel.read(byteBuffer);
-                  byteBuffer.flip();
-                  System.out.println(Charset.defaultCharset().newDecoder().decode(byteBuffer)
-                      .toString());
+                  clientChannel.read(byteBuffer);    // -----> 准备读取Buffer中写入的数据
+                  byteBuffer.flip();    //切换为Buffer读模式，准备读取Buffer
+                  System.out.println(Charset.defaultCharset().newDecoder().decode(byteBuffer).toString());
                 } finally {
                   keyIterator.remove();
                   key.interestOps(SelectionKey.OP_READ);
                 }
               }
-
             }
           }
         }
       } catch (IOException ignored) {
       }
     }).start();
-
-
   }
 }

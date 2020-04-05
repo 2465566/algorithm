@@ -11,45 +11,46 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class IOServer {
-  public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-    ServerSocket serverSocket = new ServerSocket(8000);
+        ServerSocket serverSocket = new ServerSocket(8000);
 
-    ExecutorService executorService = new ThreadPoolExecutor(6, 10, 1,
-        TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10) {
+        ExecutorService executorService = new ThreadPoolExecutor(6, 10, 1,
+                TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10) {
         });
 
-    // (1) 接收新连接线程
-    new Thread(() -> {
-      while (true) {
-        try {
-          // (1) 阻塞方法获取新的连接
-          Socket socket = serverSocket.accept();
+        // (1) 接收新连接线程
+        new Thread(() -> {
+            while (true) {
+                try {
+                    // (1) 阻塞方法获取新的连接
+                    Socket socket = serverSocket.accept();
 
-          // (2) 每一个新的连接都创建一个线程，负责读取数据
-          executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-              try {
-                byte[] data = new byte[1024];
-                InputStream inputStream = socket.getInputStream();
-                while (true) {
-                  int len;
-                  // (3) 按字节流方式读取数据
-                  while ((len = inputStream.read(data)) != -1) {
-                    System.out.println(new String(data, 0, len));
-                  }
+                    // (2) 每一个新的连接都创建一个线程，负责读取数据
+                    executorService.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                byte[] data = new byte[1024];
+                                InputStream inputStream = socket.getInputStream();
+                                while (true) {                //----------------------BIO  每一个线程都有一个死循环来监听数据。而NIO只有一个
+                                    int len;
+                                    // (3) 按字节流方式读取数据
+                                    while ((len = inputStream.read(data)) != -1) {
+                                        System.out.println(new String(data, 0, len));
+                                    }
+                                }
+                            } catch (IOException e) {
+                              e.printStackTrace();
+                            }
+                        }
+                    });
+
+                } catch (IOException e) {
                 }
-              } catch (IOException e) {
-              }
+
             }
-          });
-
-        } catch (IOException e) {
-        }
-
-      }
-    }).start();
-  }
+        }).start();
+    }
 
 }
