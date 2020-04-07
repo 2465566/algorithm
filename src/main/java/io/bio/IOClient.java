@@ -12,7 +12,7 @@ public class IOClient {
         while (true) {
           try {
             socket.getOutputStream().write((new Date() + ": hello world6676").getBytes());
-            socket.getOutputStream().flush();
+            socket.getOutputStream().flush();   // 调用 flush() 才真正将缓冲区的数据发送出去
             Thread.sleep(2000);
           } catch (Exception e) {
             e.printStackTrace();

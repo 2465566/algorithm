@@ -47,6 +47,7 @@ public class IOServer {
                     });
 
                 } catch (IOException e) {
+                    e.printStackTrace();
                 }
 
             }
